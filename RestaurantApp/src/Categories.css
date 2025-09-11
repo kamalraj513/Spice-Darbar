@@ -1,0 +1,30 @@
+/* Dropdown container */
+.categories-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Select dropdown */
+.categories-select {
+  padding: 10px 14px;
+  border: 1px solid #d2b48c;   /* light brown border */
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fffaf0;   /* cream */
+  color: #4b2e2e;              /* dark brown text */
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.categories-select:hover {
+  border-color: #8b4513;
+}
+
+/* Option styles */
+.categories-select option {
+  background-color: #fffaf0;   /* cream */
+  color: #4b2e2e;              /* dark brown */
+}

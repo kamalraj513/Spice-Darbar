@@ -1,0 +1,25 @@
+/* Search box container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Input field */
+.search-input {
+  width: 250px;
+  padding: 10px 14px;
+  border: 1px solid #d2b48c;   /* light brown border */
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  background-color: #fffaf0;   /* cream */
+  color: #4b2e2e;              /* dark brown text */
+  transition: all 0.3s ease;
+}
+
+/* On focus effect */
+.search-input:focus {
+  border-color: #8b4513;       /* rich brown */
+  box-shadow: 0 0 6px rgba(139, 69, 19, 0.4);
+}

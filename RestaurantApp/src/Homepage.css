@@ -1,0 +1,44 @@
+/* Container for the top controls */
+.top-controls {
+  display: flex;
+  justify-content: space-between; /* Search left, Categories right */
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 30px; /* Space from left and right */
+}
+
+/* Search bar styling */
+.top-controls input[type="text"] {
+  padding: 8px 12px;
+  border: 1px solid #b08d57; /* Royal brown border */
+  border-radius: 8px;
+  font-size: 16px;
+  color: #5a3825; /* Dark brown text */
+  background-color: #fdf6e3; /* Cream background */
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.top-controls input[type="text"]:focus {
+  border-color: #8b5e34;
+  box-shadow: 0 0 6px rgba(139, 94, 52, 0.4);
+}
+
+/* Category dropdown styling */
+.top-controls select {
+  padding: 8px 12px;
+  border: 1px solid #b08d57;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #5a3825;
+  background-color: #fdf6e3;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.top-controls select:hover,
+.top-controls select:focus {
+  border-color: #8b5e34;
+  box-shadow: 0 0 6px rgba(139, 94, 52, 0.4);
+  cursor: pointer;
+}

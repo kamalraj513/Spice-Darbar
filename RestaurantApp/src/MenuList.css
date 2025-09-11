@@ -1,0 +1,85 @@
+/* Global reset */
+body {
+  margin: 0;
+  padding: 0;
+  background: #fdf6e3; /* cream background */
+  color: #4b2e2e; /* deep brown text */
+  font-family: 'Georgia', serif;
+}
+
+/* Container grid */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Each card */
+.menu-card {
+  background: #fff8e7; /* lighter cream */
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(75, 46, 46, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(139, 69, 19, 0.3); /* soft brown border */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(139, 69, 19, 0.35);
+  border-color: #8b4513; /* dark brown */
+}
+
+/* Card image */
+.menu-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #c49a6c; /* royal golden-brown */
+}
+
+/* Card body */
+.menu-card-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.menu-card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #5a3825; /* dark rich brown */
+}
+
+.menu-card-price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #8b4513; /* golden brown */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .menu-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .menu-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
