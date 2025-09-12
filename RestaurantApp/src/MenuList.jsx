@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from 'react'
 import './MenuList.css'  // Import CSS file
+import AddCard from './AddCart';
 
 
 function MenuList({menuItems}) {
@@ -16,6 +17,7 @@ function MenuList({menuItems}) {
           <div className="menu-card-body">
             <h3 className="menu-card-title">{product.name}</h3>
             <p className="menu-card-price">₹{product.price}</p>
+            <AddCard></AddCard>
           </div>
         </div>
       ))}

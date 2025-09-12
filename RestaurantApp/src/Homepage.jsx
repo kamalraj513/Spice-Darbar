@@ -67,7 +67,10 @@ function Homepage() {
         {filteredProducts.length ? (
           <MenuList menuItems={filteredProducts} />
         ) : (
-          <p>No products available</p>
+          <div className="no-menu-message">
+          <h2>Oops! No food items here 🍴</h2>
+          <p>Looks like our chef is taking a short break. Please check back soon!</p>
+        </div>
         )}
       </div>
     </div>

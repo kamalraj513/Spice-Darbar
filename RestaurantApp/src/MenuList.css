@@ -13,8 +13,12 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  min-height: 100vh;
   box-sizing: border-box;
+
+  /* ✅ Fixes */
+  align-content: start;  /* keeps items at top */
+  justify-content: center; /* centers few items */
+  /* min-height: 100vh; ❌ removed, no forced stretch */
 }
 
 /* Each card */
@@ -28,6 +32,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  /* ✅ Fix equal card height */
+  height: 100%;
+  max-width: 300px; /* limits width of a single card */
+
 }
 
 .menu-card:hover {
@@ -81,5 +90,3 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-

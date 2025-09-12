@@ -42,3 +42,20 @@
   box-shadow: 0 0 6px rgba(139, 94, 52, 0.4);
   cursor: pointer;
 }
+.no-menu-message {
+  grid-column: 1/-1; /* spans the full width */
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #8b4513; /* royal brown */
+  font-family: 'Georgia', serif;
+}
+
+.no-menu-message h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.no-menu-message p {
+  font-size: 1.2rem;
+  color: #5a3825; /* dark brown */
+}
