@@ -2,6 +2,7 @@ package com.Hotel.Hotel.config;
 
 import com.Hotel.Hotel.model.Category;
 import com.Hotel.Hotel.model.MenuItems;
+import com.Hotel.Hotel.repository.CartRepository;
 import com.Hotel.Hotel.repository.CategoriesRepository;
 import com.Hotel.Hotel.repository.MenuItemsRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -14,15 +15,18 @@ public class Dataseeder implements CommandLineRunner {
 
     private final CategoriesRepository categoriesRepository;
     private final MenuItemsRepository menuItemsRepository;
+    private final CartRepository cartRepository;
 
-    public Dataseeder(CategoriesRepository categoriesRepository, MenuItemsRepository menuItemsRepository) {
+    public Dataseeder(CategoriesRepository categoriesRepository, MenuItemsRepository menuItemsRepository, CartRepository cartRepository) {
         this.categoriesRepository = categoriesRepository;
         this.menuItemsRepository = menuItemsRepository;
+        this.cartRepository = cartRepository;
     }
 
     @Override
     public void run(String... args) throws Exception {
         // Delete existing data
+        cartRepository.deleteAll();
         menuItemsRepository.deleteAll();
         categoriesRepository.deleteAll();
 

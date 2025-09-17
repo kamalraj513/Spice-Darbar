@@ -1,0 +1,188 @@
+/* Cart Page */
+
+
+.cart-page {
+  padding: 2rem;
+  background: #fdf6e3; /* cream */
+  min-height: 100vh;
+  font-family: 'Georgia', serif;
+}
+
+.cart-page h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #5a3825; /* dark brown */
+  text-align: center;
+}
+
+/* Cart Card */
+.cart-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* remove button pushed to right */
+  gap: 1.5rem;
+  background: #fff8e7;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 15px rgba(75, 46, 46, 0.2);
+  border: 1px solid rgba(139, 69, 19, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(139, 69, 19, 0.35);
+}
+
+/* Product Image */
+.cart-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  border: 2px solid #c49a6c;
+}
+
+/* Cart Info */
+.cart-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cart-info h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #5a3825;
+}
+
+.cart-info p {
+  margin: 0;
+  font-size: 1rem;
+  color: #8b4513;
+  font-weight: bold;
+}
+
+/* Quantity Controls */
+.cart-quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cart-quantity-controls button {
+  background: #8b4513;
+  color: #fffaf0;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.cart-quantity-controls button:hover {
+  background: #a0522d;
+  transform: scale(1.1);
+}
+
+.cart-quantity-controls span {
+  min-width: 24px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #5a3825;
+}
+
+/* Remove Button (right end) */
+.remove-btn {
+  background: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-left: auto; /* push to right */
+}
+
+.remove-btn:hover {
+  background: #c9302c;
+}
+
+/* Total */
+.cart-page h3 {
+  text-align: right;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #5a3825;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .cart-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .remove-btn {
+    margin-left: 0;
+    margin-top: 0.6rem;
+    align-self: center;
+  }
+
+  .cart-page h3 {
+    text-align: center;
+  }
+}
+.cart-page {
+  margin-top: 0;   /* or smaller value */
+  padding-top: 0;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 1rem;
+}
+
+/* Common button styles */
+.back-btn,
+.buy-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(139, 69, 19, 0.3);
+}
+
+/* Back Button (Royal Blue-Brown) */
+.back-btn {
+  background-color: #8b4513;   /* royal brown */
+  color: #fffaf0;             /* cream text */
+}
+
+.back-btn:hover {
+  background-color: #a0522d;  /* lighter royal brown */
+  transform: scale(1.05);
+}
+
+/* Buy Button (Royal Green-Golden) */
+.buy-btn {
+  background-color: #556b2f;  /* royal green */
+  color: #fffaf0;            /* cream text */
+  border: 2px solid #c49a6c; /* golden border */
+}
+
+.buy-btn:hover {
+  background-color: #6b8e23; /* lighter royal green */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(139, 69, 19, 0.4);
+}

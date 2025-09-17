@@ -1,0 +1,105 @@
+.welcome-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between; /* push text left, logo right */
+  align-items: center;
+
+  background: linear-gradient(135deg, #fdf6e3, #8b5e3c);
+  padding: 15px 25px; /* reduce padding so logo doesn't spill */
+  box-sizing: border-box;
+
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  font-family: 'Georgia', serif;
+  color: #4b2e2e;
+}
+
+.welcome-text {
+  flex: 1; 
+  text-align: left;
+}
+
+.welcome-text h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.3;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-logo {
+  flex-shrink: 0;   /* don’t let logo shrink */
+  max-width: 120px; /* keep inside screen */
+}
+
+.welcome-logo img {
+  height: 60px;
+  width: auto;
+  border: 1px solid #fdf6e3;
+  display: block;
+  max-width: 100%;
+  border-radius: 6px;
+  object-fit: contain;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive for mobiles */
+@media (max-width: 768px) {
+  .welcome-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px 18px;
+  }
+
+  .welcome-text {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .welcome-logo {
+    max-width: 100px;
+  }
+
+  .welcome-logo img {
+    height: 50px;
+  }
+}
+
+/* prevent body content from hiding behind fixed header */
+body {
+  margin: 0;
+  padding-top: 90px; /* adjust based on header height */
+}
+.welcome-left {
+  flex: 1;
+  text-align: left;
+}
+
+.welcome-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cart-link {
+  text-decoration: none;
+  color: #4b2e2e;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+}
+
+.cart-link:hover {
+  background: rgba(255,255,255,0.9);
+}

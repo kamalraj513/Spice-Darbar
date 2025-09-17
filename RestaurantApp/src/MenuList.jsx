@@ -1,10 +1,8 @@
-import React, { useEffect, useState} from 'react'
-import './MenuList.css'  // Import CSS file
-import AddCard from './AddCart';
+import React from 'react';
+import './MenuList.css';  // Import CSS file
+import AddCart from './AddCart';
 
-
-function MenuList({menuItems}) {
-
+function MenuList({ menuItems, userId, onCartUpdate }) {
   return (
     <div className="menu-container">
       {menuItems.map((product) => (
@@ -17,12 +15,18 @@ function MenuList({menuItems}) {
           <div className="menu-card-body">
             <h3 className="menu-card-title">{product.name}</h3>
             <p className="menu-card-price">₹{product.price}</p>
-            <AddCard></AddCard>
+
+            {/* AddCart button with quantity */}
+            <AddCart
+              product={product}
+              userId={userId}
+              onCartUpdate={onCartUpdate} // callback from Homepage
+            />
           </div>
         </div>
       ))}
     </div>
-  )
+  );
 }
 
 export default MenuList;

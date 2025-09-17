@@ -18,3 +18,76 @@
   background-color: #a0522d; /* lighter royal brown */
   transform: scale(1.05);
 }
+
+/* Add to Cart button */
+.add-cart-btn {
+  background-color: #8b4513; /* royal brown */
+  color: #fffaf0; /* cream text */
+  border: none;
+  padding: 10px 16px;
+  margin-top: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-cart-btn:hover {
+  background-color: #a0522d; /* lighter royal brown */
+  transform: scale(1.05);
+}
+
+/* Quantity controls container */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #fffaf0; /* cream */
+  border: 1px solid #d2b48c; /* tan border */
+  border-radius: 12px;
+  padding: 6px 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons inside quantity controls */
+.quantity-btn {
+  background-color: #8b4513;
+  color: #fffaf0;
+  border: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.quantity-btn:hover {
+  background-color: #a0522d;
+  transform: scale(1.1);
+}
+
+/* Quantity number display */
+.quantity-display {
+  font-size: 16px;
+  font-weight: bold;
+  color: #4b2e2e; /* dark coffee */
+  margin: 0 8px;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Add-cart container to keep everything consistent */
+.add-cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
