@@ -8,9 +8,16 @@ import MenuList from './MenuList';
 //import Categories from './Categories';
 import Homepage from './Homepage';
 import Cart from './Cart';
+import Order from "./Order.jsx";
+import UserAddress from "./UserAddress.jsx";
 
 function App() {
   
+  const[total,setTotal]= useState(0);
+  const handleTotal = (data)=>
+  {
+    setTotal(data);
+  }
 
 
   return (
@@ -23,7 +30,9 @@ function App() {
         <Route path="/forgot" element={<ForgotPassword />} />
         <Route path="/reset-password/:userId" element={<ResetPassword />} />
         <Route path="/menu" element={<Homepage />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart/>} />
+         <Route path="/orders" element={<Order/>} />
+         <Route path="/useraddress" element={<UserAddress></UserAddress>}/>
       </Routes>
     </Router>
     </div>

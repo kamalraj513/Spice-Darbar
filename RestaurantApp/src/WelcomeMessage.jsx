@@ -31,6 +31,11 @@ function WelcomeMessage({ cartCount }) {
           🛒 Cart
         </Link>
 
+        {/* Cart Icon */}
+        <Link to="/orders" className="cart-link">
+          🧾 Orders
+        </Link>
+
         {/* Logo */}
         <div className="welcome-logo">
           <img src={Logo} alt="Spice Darbar Logo" />

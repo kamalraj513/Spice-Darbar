@@ -1,6 +1,6 @@
-/* Cart Page */
-
-
+/* ================================
+   Cart Page
+================================ */
 .cart-page {
   padding: 2rem;
   background: #fdf6e3; /* cream */
@@ -8,6 +8,7 @@
   font-family: 'Georgia', serif;
 }
 
+/* Page Heading */
 .cart-page h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -15,11 +16,13 @@
   text-align: center;
 }
 
-/* Cart Card */
+/* ================================
+   Cart Card
+================================ */
 .cart-card {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* remove button pushed to right */
+  justify-content: space-between;
   gap: 1.5rem;
   background: #fff8e7;
   border-radius: 1rem;
@@ -44,7 +47,9 @@
   border: 2px solid #c49a6c;
 }
 
-/* Cart Info */
+/* ================================
+   Cart Info
+================================ */
 .cart-info {
   flex: 1;
   display: flex;
@@ -96,7 +101,7 @@
   color: #5a3825;
 }
 
-/* Remove Button (right end) */
+/* Remove Button */
 .remove-btn {
   background: #d9534f;
   color: #fff;
@@ -112,7 +117,9 @@
   background: #c9302c;
 }
 
-/* Total */
+/* ================================
+   Total Section
+================================ */
 .cart-page h3 {
   text-align: right;
   margin-top: 2rem;
@@ -120,7 +127,57 @@
   color: #5a3825;
 }
 
-/* Responsive */
+/* ================================
+   Action Buttons (Bottom)
+================================ */
+.cart-actions {
+  display: flex;
+  justify-content: space-between; /* ✅ Back left, Proceed right */
+  align-items: center;
+  margin-top: 25px;
+  gap: 1rem;
+}
+
+/* Common Button Styles */
+.back-btn,
+.buy-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(139, 69, 19, 0.3);
+}
+
+/* Back Button */
+.back-btn {
+  background-color: #8b4513;   /* royal brown */
+  color: #fffaf0;             /* cream text */
+}
+
+.back-btn:hover {
+  background-color: #a0522d;
+  transform: scale(1.05);
+}
+
+/* Buy Button */
+.buy-btn {
+  background-color: #556b2f;  /* royal green */
+  color: #fffaf0;
+  border: 2px solid #c49a6c;  /* golden border */
+}
+
+.buy-btn:hover {
+  background-color: #6b8e23;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(139, 69, 19, 0.4);
+}
+
+/* ================================
+   Responsive
+================================ */
 @media (max-width: 992px) {
   .cart-card {
     flex-direction: column;
@@ -137,52 +194,15 @@
   .cart-page h3 {
     text-align: center;
   }
-}
-.cart-page {
-  margin-top: 0;   /* or smaller value */
-  padding-top: 0;
-}
 
-.cart-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 25px;
-  gap: 1rem;
-}
+  .cart-actions {
+    flex-direction: column;
+    justify-content: center;
+  }
 
-/* Common button styles */
-.back-btn,
-.buy-btn {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 8px rgba(139, 69, 19, 0.3);
-}
-
-/* Back Button (Royal Blue-Brown) */
-.back-btn {
-  background-color: #8b4513;   /* royal brown */
-  color: #fffaf0;             /* cream text */
-}
-
-.back-btn:hover {
-  background-color: #a0522d;  /* lighter royal brown */
-  transform: scale(1.05);
-}
-
-/* Buy Button (Royal Green-Golden) */
-.buy-btn {
-  background-color: #556b2f;  /* royal green */
-  color: #fffaf0;            /* cream text */
-  border: 2px solid #c49a6c; /* golden border */
-}
-
-.buy-btn:hover {
-  background-color: #6b8e23; /* lighter royal green */
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(139, 69, 19, 0.4);
+  .back-btn,
+  .buy-btn {
+    width: 100%;
+    text-align: center;
+  }
 }

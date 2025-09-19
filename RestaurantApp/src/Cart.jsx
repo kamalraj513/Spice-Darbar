@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; 
 import './Cart.css';
 
-function Cart() {
+function Cart({onSend}) {
   const [cartItems, setCartItems] = useState([]);
   const user = JSON.parse(localStorage.getItem("user"));
   const userId = user?.id;
@@ -104,15 +104,26 @@ function Cart() {
       ))}
       <h3>Total: ₹{totalPrice}</h3>
 
-      {/* ✅ Action Buttons */}
       <div className="cart-actions">
-        <button className="back-btn" onClick={() => navigate("/menu")}>
-          Back to Home
-        </button>
-        <button className="buy-btn" onClick={() => navigate("/checkout")}>
-          Proceed to Order
-        </button>
-      </div>
+  <div className="left-btn">
+    <button
+      className="back-btn"
+      onClick={() => {
+        navigate("/menu");
+        ()=>onSend(totalPrice);
+      }}
+    >
+      Back to Home
+    </button>
+  </div>
+
+    <div className="right-btn">
+      <button className="buy-btn" onClick={() => navigate("/useraddress")}>
+        Proceed to Order
+      </button>
+    </div>
+</div>
+
     </div>
   );
 }

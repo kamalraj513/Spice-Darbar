@@ -1,0 +1,115 @@
+/* Main container */
+.orders-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fdf5e6; /* soft cream base */
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(90, 56, 20, 0.15);
+  font-family: "Georgia", serif;
+  color: #3e2615; /* rich brown */
+}
+
+/* Title */
+.orders-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #6b4228;
+  border-bottom: 2px solid #d2b48c;
+  padding-bottom: 10px;
+}
+
+/* No orders text */
+.no-orders {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #8b5e3c;
+  margin-top: 20px;
+}
+
+/* Each order card */
+.order-card {
+  background: #fffaf3;
+  border: 1px solid #d2b48c;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(139, 94, 60, 0.25);
+}
+
+/* Order details */
+.order-id {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #6b4228;
+  margin-bottom: 10px;
+}
+
+.order-address {
+  font-size: 1rem;
+  color: #4b2e1a;
+  margin-bottom: 6px;
+}
+
+.order-payment {
+  font-size: 1rem;
+  color: #8b5e3c;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+/* Order items */
+.order-items {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.order-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #d2b48c;
+}
+
+.order-item {
+  font-size: 1.1rem;
+  color: #3e2615;
+  font-weight: 500;
+}
+
+.order-price {
+  font-weight: bold;
+  color: #6b4228;
+  margin-left: 8px;
+}
+
+/* Back button */
+.back-btn {
+  margin-top: 20px;
+  padding: 14px 20px;
+  background: #8b5e3c;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #6b4228;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(107, 66, 40, 0.25);
+}
